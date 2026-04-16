@@ -1,2 +1,6 @@
 import pandas as pd
-import numpy as np
+from sktime import datasets
+
+def create_dummy_ts():
+    df = datasets.load_hierarchical_sales_toydata().reset_index()
+    return df

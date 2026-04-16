@@ -50,3 +50,4 @@ results/
 .pytest_cache/
 .coverage
 htmlcov/
+test.ipynb
