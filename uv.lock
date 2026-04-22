@@ -630,7 +630,6 @@ dependencies = [
     { name = "darts" },
     { name = "ipykernel" },
     { name = "sktime" },
-    { name = "utils" },
 ]
 
 [package.metadata]
@@ -638,7 +637,6 @@ requires-dist = [
     { name = "darts", specifier = ">=0.43.0" },
     { name = "ipykernel", specifier = ">=7.2.0" },
     { name = "sktime", specifier = ">=0.40.1" },
-    { name = "utils", editable = "utils" },
 ]
 
 [[package]]
@@ -1384,11 +1382,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6
 wheels = [
     { url = "https://files.pythonhosted.org/packages/39/08/aaaad47bc4e9dc8c725e68f9d04865dbcb2052843ff09c97b08904852d84/urllib3-2.6.3-py3-none-any.whl", hash = "sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4", size = 131584, upload-time = "2026-01-07T16:24:42.685Z" },
 ]
-
-[[package]]
-name = "utils"
-version = "0.1.0"
-source = { editable = "utils" }
 
 [[package]]
 name = "wcwidth"

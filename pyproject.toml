@@ -12,12 +12,8 @@ dependencies = [
     "darts>=0.43.0",
     "ipykernel>=7.2.0",
     "sktime>=0.40.1",
-    "utils",
 ]
 
-[tool.uv.sources]
-utils = { path = "utils", editable = true }
-
 [tool.hatch.build.targets.wheel]
-packages = ["utils", "src"]
+packages = ["src/conformal_monte_carlo"]
 

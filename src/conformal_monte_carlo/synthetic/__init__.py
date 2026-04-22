@@ -1,6 +1,6 @@
-"""Utils package.
+"""Time series utilities package.
 
-This package contains utility functions and classes for the project.
+This package contains utility functions and classes for time series forecasting.
 """
 
 from .dummy_predictor import DummyPredictor
