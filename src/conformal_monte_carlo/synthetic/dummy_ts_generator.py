@@ -5,8 +5,8 @@ from sktime import datasets
 from darts import TimeSeries
 
 
-def create_dummy_ts() -> tuple[pd.DataFrame, list[TimeSeries]]:
-    """Creates a dummy time series dataset using sktime's hierarchical data.
+def generate_dummy_ts() -> tuple[pd.DataFrame, list[TimeSeries]]:
+    """Generates a dummy time series dataset using sktime's hierarchical data.
     
     For rows with product line 'Food preparation' and product group 'Hobs':
     - Changes the product line to 'Food preservation' and product group to 'Dehydrators'
@@ -21,6 +21,12 @@ def create_dummy_ts() -> tuple[pd.DataFrame, list[TimeSeries]]:
     df.loc[mask, ["Product line", "Product group"]] = ["Food preservation", "Dehydrators"]
     df = df.drop(df[mask].index[:48]).reset_index(drop=True)
     df["Date"] = df["Date"].dt.to_timestamp()
-    ts_list = TimeSeries.from_group_dataframe(df, group_cols=["Product line", "Product group"], time_col="Date", value_cols="Sales")
+    ts_list = TimeSeries.from_group_dataframe(
+        df=df, 
+        group_cols=["Product line", "Product group"], 
+        time_col="Date", 
+        value_cols="Sales",
+        metadata_cols=["Product line", "Product group"]
+        )
     
     return df, ts_list
